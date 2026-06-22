@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head lang="en">
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap"
+      />
+    </noscript>
+
+    <meta name="color-scheme" content="light dark" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover" />
+    <meta
+      name="description"
+      content="Yeshua The Messiah Mission (YMM) — A movement dedicated to evangelism, discipleship, church planting, prayer, theological education, youth transformation and national revival across India."
+    />
+    <meta
+      name="keywords"
+      content="Yeshua The Messiah Mission, YMM, church planting India, evangelism, discipleship, Vision 2030, NBMS, ETS, FNPF, House of Zion, GRM, Rehoboth Revival Center, IEMM"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Yeshua The Messiah Mission" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Yeshua The Messiah Mission — Winning Souls. Transforming Nations." />
+    <meta
+      property="og:description"
+      content="A movement dedicated to evangelism, discipleship, church planting, prayer, theological education, youth transformation and national revival."
+    />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Yeshua The Messiah Mission" />
+    <meta
+      name="twitter:description"
+      content="Winning Souls. Transforming Nations. Preparing the Way."
+    />
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <title>Yeshua The Messiah Mission — Winning Souls. Transforming Nations.</title>
+  </head>
+
+  <body>
+    <script>
+      // Prevent flash of wrong theme — runs before Vue mounts
+      (function() {
+        var t = localStorage.getItem('ymm-theme');
+        if (t === 'dark') {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Yeshua The Messiah Mission",
+        "alternateName": "YMM",
+        "description": "A movement dedicated to evangelism, discipleship, church planting, prayer, theological education, youth transformation and national revival across India.",
+        "foundingDate": "2024",
+        "areaServed": {
+          "@type": "Country",
+          "name": "India"
+        }
+      }
+    </script>
+  </body>
+</html>
