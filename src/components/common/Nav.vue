@@ -15,13 +15,13 @@
     tabindex="0"
     id="navbar"
     @keydown.esc="toggleBtnClickAnimation()"
-    class="bg-t-surface fixed top-[1dvh] right-0 z-9998 h-[98dvh] w-full translate-x-full rounded-s-lg p-5 will-change-auto select-none focus:outline-hidden max-md:w-[98%] sm:p-10 md:w-3/5 md:px-20 lg:w-2/5"
+    class="bg-t-surface fixed top-[1dvh] right-0 z-9998 h-[98dvh] w-full translate-x-full rounded-s-lg p-5 will-change-auto select-none focus:outline-hidden max-md:w-[98%] sm:p-10 md:w-3/5 md:px-12 lg:px-20 lg:w-2/5"
   >
     <Circles id="circles" class="absolute top-0 right-0 opacity-25" />
     <div class="flex h-full flex-col items-center justify-between">
       <div class="relative z-19 w-full">
         <ul
-          class="heading-3 sm:heading-2 text-t-text mt-8 font-bold md:mt-24"
+          class="heading-4 sm:heading-3 md:heading-2 text-t-text mt-8 font-bold md:mt-24"
           id="navLinks"
         >
           <li

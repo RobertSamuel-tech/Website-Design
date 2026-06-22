@@ -30,9 +30,9 @@
       ></h3>
     </div>
 
-    <div class="padding-y md:column-gap mt-6 grid grid-cols-12">
+    <div class="padding-y md:column-gap mt-4 sm:mt-6 grid grid-cols-1 md:grid-cols-12">
       <div
-        class="pointer-events-none col-span-full content-end rounded-lg select-none md:col-span-4"
+        class="pointer-events-none col-span-full content-end rounded-lg select-none hidden md:block md:col-span-4"
       >
         <div
           class="flex-center aspect-[1/1.2] w-full rounded-lg bg-t-card overflow-hidden"
@@ -49,7 +49,7 @@
           </svg>
         </div>
       </div>
-      <div class="col-span-11 mt-10 md:col-span-8 md:col-start-6">
+      <div class="col-span-full mt-6 sm:mt-10 md:col-span-8 md:col-start-6">
         <p
           class="heading-4 relative w-full max-w-[40ch] leading-snug font-medium text-balance"
         >
@@ -58,7 +58,7 @@
         </p>
 
         <div
-          class="text-t-text-2 mt-[5%] flex justify-start gap-10 sm:gap-20"
+          class="text-t-text-2 mt-[5%] flex flex-col gap-4 sm:flex-row sm:justify-start sm:gap-10 md:gap-20"
         >
           <p class="heading-6 text-t-text-2/85 text-center sm:text-nowrap">
             ( OUR MISSION )

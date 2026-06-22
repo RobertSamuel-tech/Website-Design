@@ -8,7 +8,7 @@
 
       <div class="relative z-10 text-center">
         <p
-          class="heading-6 text-flax-smoke-500 mb-8 font-mono uppercase tracking-[0.3em]"
+          class="heading-6 text-flax-smoke-500 mb-4 sm:mb-8 font-mono uppercase tracking-[0.1em] sm:tracking-[0.3em]"
         >
           Rehoboth Revival Center
         </p>
@@ -23,7 +23,7 @@
           </h3>
         </div>
 
-        <div class="mx-auto mt-16 max-w-[50ch]">
+        <div class="mx-auto mt-8 sm:mt-16 max-w-[50ch]">
           <p
             class="heading-5 revival-text text-flax-smoke-300 text-balance opacity-0"
           >
@@ -33,14 +33,14 @@
           </p>
         </div>
 
-        <div class="mt-16 grid grid-cols-3 gap-8 sm:gap-16">
+        <div class="mt-8 sm:mt-16 grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-16">
           <div
             v-for="pillar in pillars"
             :key="pillar.title"
             class="revival-pillar flex-center flex-col opacity-0 translate-y-4"
           >
             <div
-              class="flex-center mb-4 size-16 rounded-full border border-flax-smoke-500/30"
+              class="flex-center mb-4 size-12 sm:size-16 rounded-full border border-flax-smoke-500/30"
             >
               <span class="text-2xl text-flax-smoke-400">{{ pillar.icon }}</span>
             </div>

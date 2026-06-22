@@ -17,9 +17,9 @@
           class="sm:heading-2 flex w-full items-center text-xl font-medium text-nowrap whitespace-nowrap max-sm:mx-4"
         >
           GoForth Reforming Mission
-          <span class="mx-6 inline-block text-t-muted-2">✦</span>
+          <span class="mx-3 inline-block text-t-muted-2 sm:mx-6">✦</span>
           Rise Up
-          <span class="mx-6 inline-block text-t-muted-2">✦</span>
+          <span class="mx-3 inline-block text-t-muted-2 sm:mx-6">✦</span>
         </h4>
       </div>
     </div>

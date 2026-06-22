@@ -1,7 +1,7 @@
 <template>
   <section
     id="contact"
-    class="relative min-h-svh w-full overflow-clip p-[4vh] select-none"
+    class="relative min-h-svh w-full overflow-clip p-3 sm:p-[4vh] select-none"
   >
     <div
       class="flex-center relative h-[92vh] w-full flex-col rounded-lg bg-[#1E0F13] uppercase"
@@ -20,9 +20,9 @@
         </div>
       </div>
 
-      <div class="flex-center z-10 flex-col gap-y-10">
+      <div class="flex-center z-10 flex-col gap-y-6 sm:gap-y-10">
         <p
-          class="heading-4 text-flax-smoke-300 max-w-[30ch] text-center font-mono"
+          class="text-sm sm:heading-4 text-flax-smoke-300 max-w-[30ch] text-center font-mono"
         >
           Preparing India For Revival
         </p>
@@ -40,14 +40,14 @@
         </div>
 
         <div
-          class="mt-[5%] flex scale-150 items-center lg:scale-[1.5] xl:scale-[2] 2xl:scale-[2.5]"
+          class="mt-[5%] flex scale-100 items-center sm:scale-125 lg:scale-[1.5] xl:scale-[2]"
         >
           <Button label="Join the Mission" url="#mission" />
         </div>
       </div>
 
       <div
-        class="absolute bottom-5 flex w-full items-center justify-center px-5 md:justify-between"
+        class="absolute bottom-3 sm:bottom-5 flex w-full items-center justify-center px-3 sm:px-5 md:justify-between"
       >
         <div class="hidden md:flex md:flex-col">
           <p

@@ -18,7 +18,7 @@
           ( ORGANIZATIONS )
         </p>
         <p
-          class="heading-4 font-fancy col-span-8 w-full text-balance sm:font-semibold md:col-span-5"
+          class="heading-4 font-fancy col-span-full sm:col-span-8 w-full text-balance sm:font-semibold md:col-span-5"
         >
           Seven interconnected ministries working as one body to advance the
           Kingdom across prayer, education, evangelism, and church planting.
@@ -39,7 +39,7 @@
           <div
             class="flex items-center justify-between gap-4 py-5 sm:py-6"
           >
-            <div class="flex items-center gap-4 sm:gap-8">
+            <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-8">
               <span
                 class="font-mono text-base font-extrabold text-t-accent sm:text-lg md:text-xl"
               >
@@ -120,7 +120,7 @@
     const remaining = (totalCards - 1 - index) * STEP;
     return {
       top: `calc(15vh + ${index * STEP}em)`,
-      marginBottom: `${remaining}em`,
+      marginBottom: `min(${remaining}em, 6rem)`,
       zIndex: index + 1,
     };
   };
