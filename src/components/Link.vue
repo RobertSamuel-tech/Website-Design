@@ -3,7 +3,7 @@
     :is="tag"
     class="h-[2ch] w-fit overflow-y-hidden select-none max-md:h-5"
   >
-    <a @click="gotoSection(url)" :href="url" class="group">
+    <a @click.prevent="gotoSection(url, $event)" :href="url" class="group">
       <p
         class="font-fancy -translate-y-0 transition-all duration-300 ease-in-out will-change-auto group-hover:translate-y-[-100%]"
         :class="{ flex: icon }"

@@ -2,9 +2,9 @@
   <component
     :is="url ? 'a' : 'button'"
     @click="
-      () => {
+      (e: Event) => {
         if (url && url.startsWith('#')) {
-          gotoSection(url);
+          gotoSection(url, e);
         }
       }
     "

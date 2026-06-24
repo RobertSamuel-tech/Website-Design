@@ -233,22 +233,22 @@ const animateLoadingPath = (
 const animateLoadingTextContainer = () => {
   gsap.fromTo(
     '#text',
-    1,
-    { yoyo: true, opacity: 0 },
-    { opacity: 1, ease: 'circ.inOut' },
+    1.2,
+    { opacity: 0 },
+    { opacity: 1, ease: 'power2.out' },
   );
 };
 
 const animateLoadingText = (id: string) => {
   gsap.to(id, {
     y: 0,
-    duration: 1,
+    duration: 1.2,
     ease: 'power2.inOut',
-    delay: 0.5,
-    stagger: 0.1,
+    delay: 0.4,
+    stagger: 0.15,
     onComplete: () => {
       gsap.to(id, {
-        delay: 1.2,
+        delay: 1,
         opacity: 0,
         duration: 1,
         ease: 'power2.inOut',
@@ -315,12 +315,10 @@ const animateHeroNav = () => {
       trigger: '#hero-wrapper',
       start: 'top top',
       end: 'bottom top',
-      scrub: 0.6,
+      scrub: 1,
     },
-    scale: 0.92,
+    scale: 0.9,
     opacity: 0,
-    y: -60,
-    filter: 'blur(8px)',
     ease: 'none',
   });
 };

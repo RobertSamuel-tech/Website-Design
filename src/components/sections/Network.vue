@@ -1,7 +1,7 @@
 <template>
-  <section id="network" class="padding-x mb-20">
+  <section id="network" class="mb-20">
     <!-- Header -->
-    <div class="flex w-full flex-col">
+    <div class="flex w-full flex-col padding-x">
       <h3
         id="network-heading"
         v-html="networkHeading"
@@ -27,70 +27,67 @@
     </div>
 
     <!-- Sticky stacking cards -->
-    <div class="relative mt-10 w-full sm:mt-16">
+    <div class="relative mt-12 w-full lg:mt-[10%] px-[clamp(1.5rem,5vw,5rem)]">
       <div class="flex flex-col">
         <div
           v-for="(org, index) in missionOrgs"
           :key="org.abbr"
-          class="sticky border-t border-t-border-2 bg-t-bg-2"
+          class="sticky border-t border-t-border-2 bg-t-bg-2 shadow-[0_-4px_24px_rgba(0,0,0,0.03)]"
           :style="getCardStyle(index)"
         >
-          <!-- Card header row -->
+          <!-- Card header -->
           <div
-            class="flex items-center justify-between gap-4 py-5 sm:py-6"
+            class="heading-3 max-sm:heading-4 flex grid-cols-12 items-center justify-start gap-5 py-7 text-left font-semibold sm:py-6 md:grid md:justify-between pl-[clamp(1rem,3vw,3rem)]"
           >
-            <div class="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-8">
-              <span
-                class="font-mono text-base font-extrabold text-t-accent sm:text-lg md:text-xl"
-              >
-                ( {{ org.abbr }} )
-              </span>
-              <h3
-                class="text-sm font-medium text-t-text-2 sm:text-base md:text-lg"
-              >
-                {{ org.name }}
-              </h3>
-            </div>
-            <div
-              v-html="shapes[index % shapes.length]"
-              class="hidden size-8 shrink-0 animate-[spin_10s_linear_infinite] fill-t-muted/40 lg:block lg:size-10"
-            />
+            <span class="col-span-3 self-center text-nowrap text-t-accent">
+              ( {{ org.abbr }} )
+            </span>
+            <h3
+              class="col-span-6 col-start-5 text-nowrap font-medium text-t-text-2 md:col-start-5"
+            >
+              {{ org.name }}
+            </h3>
           </div>
 
           <!-- Card body -->
           <div
-            class="grid gap-6 pb-8 sm:pb-10 md:grid-cols-12 md:gap-10"
+            class="relative flex min-h-[20vh] flex-col place-items-start pb-10 sm:pb-12 md:grid md:min-h-[25vh] md:grid-cols-12"
           >
-            <div class="md:col-span-5">
+            <div
+              class="col-span-7 col-start-5 flex w-full flex-col gap-y-5"
+            >
               <p
-                class="max-w-[45ch] text-sm leading-relaxed text-t-text-2/80 text-balance sm:text-base"
+                class="max-w-[40ch] text-balance text-base font-medium text-t-text-2/80"
               >
                 {{ org.description }}
               </p>
-              <p class="mt-3 text-xs font-bold uppercase tracking-wider text-t-muted-2">
+
+              <p
+                class="text-xs font-bold uppercase tracking-wider text-t-muted-2"
+              >
                 {{ org.category }}
               </p>
-            </div>
 
-            <div class="md:col-span-5 md:col-start-7">
-              <template
-                v-for="(heading, hIndex) in org.headings"
-                :key="hIndex"
-              >
-                <p
-                  class="flex items-center gap-3 py-2 text-sm font-bold text-t-text sm:text-base"
-                  :class="{
-                    'border-y border-t-border-2': hIndex === 1,
-                  }"
+              <div>
+                <template
+                  v-for="(heading, hIndex) in org.headings"
+                  :key="hIndex"
                 >
-                  <span
-                    class="font-mono text-xs font-medium text-t-muted-2/70"
+                  <p
+                    class="flex gap-x-3 py-1.5 font-bold text-t-text"
+                    :class="{
+                      'border-y border-t-border-2 py-2!': hIndex === 1,
+                    }"
                   >
-                    {{ (hIndex + 1).toString().padStart(2, '0') }}
-                  </span>
-                  {{ heading }}
-                </p>
-              </template>
+                    <span
+                      class="self-center font-mono text-base font-medium text-t-muted-2/70"
+                    >
+                      {{ (hIndex + 1).toString().padStart(2, '0') }}
+                    </span>
+                    {{ heading }}
+                  </p>
+                </template>
+              </div>
             </div>
           </div>
         </div>
@@ -113,14 +110,13 @@
     `<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><path d="M100 0L170.711 29.2893L200 100L170.711 170.711L100 200L29.2893 170.711L0 100L29.2893 29.2893L100 0Z"/></svg>`,
   ];
 
-  const STEP = 4;
+  const STEP = 5.5;
 
   const getCardStyle = (index: number) => {
-    const totalCards = missionOrgs.length;
-    const remaining = (totalCards - 1 - index) * STEP;
+    const remaining = (missionOrgs.length - 1 - index) * STEP;
     return {
-      top: `calc(15vh + ${index * STEP}em)`,
-      marginBottom: `min(${remaining}em, 6rem)`,
+      top: `calc(20vh + ${index * STEP}em)`,
+      marginBottom: `${remaining}em`,
       zIndex: index + 1,
     };
   };

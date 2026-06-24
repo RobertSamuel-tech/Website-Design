@@ -7,7 +7,7 @@
     >
       <div
         id="hero-content"
-        class="relative mx-auto flex w-full max-w-[1440px] flex-col pt-[clamp(4.5rem,8vh,7rem)] will-change-transform"
+        class="relative mx-auto flex w-full max-w-[1400px] flex-col pt-[clamp(4.5rem,8vh,7rem)] will-change-transform"
       >
         <!-- Main Headline -->
         <div class="relative w-full max-w-[900px] overflow-clip">
@@ -72,19 +72,21 @@
             <p
               v-html="whoAmI"
               id="whoAmI"
-              class="who-am-i w-full max-w-[50ch] overflow-clip text-sm leading-relaxed font-medium text-t-text-2 text-balance sm:text-base lg:text-start"
+              class="who-am-i w-full max-w-[50ch] overflow-clip heading-5 leading-snug font-medium text-t-text-2 text-balance lg:text-start"
             ></p>
 
-            <div
-              id="hero-cta"
-              class="relative flex w-full flex-col gap-3 overflow-hidden pt-1 -translate-y-full origin-left sm:w-auto sm:flex-row"
-            >
-              <Button label="Explore the Mission" url="#mission" />
-              <Button
-                label="Vision 2030"
-                url="#vision"
-                class="border border-t-border-2"
-              />
+            <div class="overflow-clip">
+              <div
+                id="hero-cta"
+                class="relative flex w-full flex-col gap-3 pt-1 translate-y-full origin-left sm:w-auto sm:flex-row"
+              >
+                <Button label="Explore the Mission" url="#mission" />
+                <Button
+                  label="Vision 2030"
+                  url="#vision"
+                  class="border border-t-border-2"
+                />
+              </div>
             </div>
           </div>
 
@@ -136,7 +138,7 @@
 
 <style>
   .hero-heading {
-    font-size: clamp(3rem, 7vw, 7rem);
+    font-size: clamp(2.5rem, 5.5vw, 5.5rem);
     line-height: 0.88;
     letter-spacing: -0.04em;
     text-rendering: optimizeLegibility;
@@ -147,7 +149,7 @@
 
   @media (max-width: 640px) {
     .hero-heading {
-      font-size: clamp(2.5rem, 11vw, 4rem);
+      font-size: clamp(2rem, 9vw, 3.25rem);
       line-height: 0.9;
       letter-spacing: -0.03em;
     }
@@ -155,7 +157,7 @@
 
   @media (min-width: 641px) and (max-width: 1024px) {
     .hero-heading {
-      font-size: clamp(3rem, 7vw, 5.5rem);
+      font-size: clamp(2.25rem, 5.5vw, 4.5rem);
       line-height: 0.88;
     }
   }

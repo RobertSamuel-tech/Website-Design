@@ -34,9 +34,10 @@ const textSplitterIntoChar = (
   return result;
 };
 
-const gotoSection = (url: string) => {
+const gotoSection = (url: string, event?: Event) => {
+  if (event) event.preventDefault();
   lenis.start();
-  lenis.scrollTo(url, { duration: 3 });
+  lenis.scrollTo(url, { duration: 2, offset: -80 });
 };
 
 export { textSplitterIntoChar, gotoSection };

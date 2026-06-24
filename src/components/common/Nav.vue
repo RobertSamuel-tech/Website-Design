@@ -32,7 +32,7 @@
           >
             <a
               :href="l.url"
-              @click="gotoSectionAndClose(l.url)"
+              @click.prevent="gotoSectionAndClose(l.url, $event)"
               class="group my-2 flex h-full w-fit translate-y-full cursor-pointer items-center justify-start leading-none will-change-auto"
             >
               <span
@@ -150,9 +150,10 @@
     }
   };
 
-  const gotoSectionAndClose = (url: string) => {
+  const gotoSectionAndClose = (url: string, event?: Event) => {
+    if (event) event.preventDefault();
     lenis.start();
-    lenis.scrollTo(url, { duration: 3 });
+    lenis.scrollTo(url, { duration: 2, offset: -80 });
     toggleBtnClickAnimation();
   };
 

@@ -40,7 +40,7 @@
         </div>
 
         <div
-          class="mt-[5%] flex scale-100 items-center sm:scale-125 lg:scale-[1.5] xl:scale-[2]"
+          class="mt-[5%] flex items-center sm:scale-110 lg:scale-125"
         >
           <Button label="Join the Mission" url="#mission" />
         </div>

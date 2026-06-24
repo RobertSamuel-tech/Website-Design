@@ -60,10 +60,9 @@
     <Hero />
 
     <!-- Scroll content: slides over the hero -->
-    <div id="scroll-content" class="relative z-10">
+    <div id="scroll-content" class="relative z-10 bg-t-bg">
       <div class="relative rounded-t-3xl bg-t-bg-2 py-[5%] text-t-text shadow-[0_-20px_60px_rgba(0,0,0,0.08)]">
         <Network />
-        <Marquee />
         <ChurchPlanting />
       </div>
 

@@ -73,11 +73,11 @@ layer(base);
   --heading-5: clamp(1.13rem, 1.004rem + 0.63vw, 1.57rem);
   --heading-4: clamp(1.25rem, 1.0359rem + 1.0707vw, 1.9995rem);
   --heading-3: clamp(1.5625rem, 1.2474rem + 1.5755vw, 2.6653rem);
-  --heading-2: clamp(1.75rem, 1.25rem + 1.8vw, 2.75rem);
-  --heading-1: clamp(2rem, 1rem + 4vw, 5rem);
-  --heading-display: clamp(2.5rem, 1rem + 5.5vw, 6.5rem);
-  --heading-body: clamp(1rem, 0.85rem + 0.5vw, 1.375rem);
-  --heading-1--alt: clamp(1.75rem, 1rem + 2.5vw, 3.5rem);
+  --heading-2: clamp(1.5rem, 1.2rem + 1.5vw, 2.75rem);
+  --heading-1: clamp(2rem, 1.5rem + 3vw, 5.5rem);
+  --heading-display: clamp(3rem, 2rem + 5vw, 7rem);
+  --heading-body: clamp(1rem, 0.85rem + 0.5vw, 1.5rem);
+  --heading-1--alt: clamp(2rem, 1.5rem + 2.5vw, 4rem);
 }
 
 /* ============================================
@@ -167,7 +167,7 @@ html.dark {
 }
 
 @utility site-container {
-  max-width: 1440px;
+  max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
@@ -178,8 +178,8 @@ html.dark {
 }
 
 @utility padding-x {
-  padding-left: max(clamp(1.25rem, 4vw, 5rem), calc((100% - 1440px) / 2 + 1.25rem));
-  padding-right: max(clamp(1.25rem, 4vw, 5rem), calc((100% - 1440px) / 2 + 1.25rem));
+  padding-left: max(clamp(1.5rem, 4vw, 4.5rem), calc((100% - 1400px) / 2 + 1.5rem));
+  padding-right: max(clamp(1.5rem, 4vw, 4.5rem), calc((100% - 1400px) / 2 + 1.5rem));
 }
 
 @utility padding-y {
@@ -203,7 +203,7 @@ html.dark {
 }
 
 @utility column-gap {
-  column-gap: clamp(1rem, 2vw, 2.5rem);
+  column-gap: 2.5rem;
 }
 
 @utility row-gap {
@@ -322,6 +322,7 @@ html.dark {
   section {
     max-width: 100vw;
     overflow-x: clip;
+    scroll-margin-top: 80px;
   }
 
   * {
