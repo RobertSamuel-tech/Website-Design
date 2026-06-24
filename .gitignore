@@ -4,7 +4,7 @@ dist
 *.local
 .DS_Store
 Thumbs.db
-design/
+/design/
 .claude/
 
 .vercel
